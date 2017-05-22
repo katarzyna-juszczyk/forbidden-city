@@ -1,0 +1,27 @@
+
+.jumbotron {
+	position: relative;
+  @extend %golden-ratio;
+	&__background {
+		@extend %object-fit-cover;
+    opacity:0;
+
+	}
+  &__animation {
+    display: block;
+    @extend %object-fit-cover;
+    &-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: $bg repeat;
+    }
+  }
+  &__link {
+    position: absolute;
+  }
+
+}

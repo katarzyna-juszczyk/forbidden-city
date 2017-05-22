@@ -1,6 +1,49 @@
 /**
  * Toolkit styles
  */
+ // SETTINGS
+ //@import "settings/settings.config";
+ @import "node_modules/inuitcss/settings/settings.core";
+// @import "settings/settings.global";
+ //@import "settings/settings.colors";
+
+ // TOOLS
+ @import "node_modules/inuitcss/tools/tools.font-size";
+ @import "node_modules/inuitcss/tools/tools.clearfix";
+// @import "node_modules/sass-mq/mq";
+ @import "tools/object-fit";
+ @import "tools/aspect-ratio";
+
+ // GENERIC
+ @import "node_modules/inuitcss/generic/generic.box-sizing";
+ @import "node_modules/inuitcss/generic/generic.normalize";
+  @import "generic/gold-stroke";
+ //@import "node_modules/inuitcss/generic/generic.shared";
+
+ // ELEMENTS
+ @import "node_modules/inuitcss/elements/elements.page";
+ @import "node_modules/inuitcss/elements/elements.headings";
+
+
+ // OBJECTS
+ @import "node_modules/inuitcss/objects/objects.layout";
+ @import "node_modules/inuitcss/objects/objects.media";
+ @import "node_modules/inuitcss/objects/objects.flag";
+ @import "node_modules/inuitcss/objects/objects.list-bare";
+ @import "node_modules/inuitcss/objects/objects.list-inline";
+ @import "node_modules/inuitcss/objects/objects.box";
+ @import "node_modules/inuitcss/objects/objects.block";
+ @import "node_modules/inuitcss/objects/objects.tables";
+
+ // COMPONENTS
+@import "components/jumbotron";
+
+ // UTILITIES
+ @import "node_modules/inuitcss/utilities/utilities.widths";
+ @import "node_modules/inuitcss/utilities/utilities.headings";
+ @import "node_modules/inuitcss/utilities/utilities.spacing";
+
+
 
 
 body {
