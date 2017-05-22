@@ -21,25 +21,30 @@
     }
   }
 
-&__pattern {
-	width: 100%;
-	height: 100%;
-}
+	&__pattern {
+		width: 100%;
+		height: 100%;
+	}
 	&__pattern-wrapper {
 		position:absolute;
 		top:0;
-		bottom:33%;
+		bottom:0;
 		left: 0;
-		right: 33%;
+		right: 0;
 		display: block;
 		background: $bg repeat;
 		overflow: hidden;
 		clip-path: polygon(100% 0, 0 100%, 0 0);
 		mix-blend-mode: darken;
-		transform: translateX(-33%);
+		transform-origin: top left;
+transform: scale(0.56);
 	}
   &__link {
     position: absolute;
+		right:0;
+		bottom:0;
+		width: 33%;
+		display: block;
   }
 
 }
