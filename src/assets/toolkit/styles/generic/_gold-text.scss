@@ -1,7 +1,7 @@
 .gold-text {
-   scolor:#c3a343;
+   color:#c3a343;
    -webkit-text-fill-color: transparent;
    background: -webkit-linear-gradient(transparent, transparent),
-   url(http://theblogmarket.co/gold-texture-image.png) repeat;
+   $bg repeat;
    -webkit-background-clip: text;
 }

@@ -37,14 +37,27 @@
 		clip-path: polygon(100% 0, 0 100%, 0 0);
 		mix-blend-mode: darken;
 		transform-origin: top left;
-transform: scale(0.56);
+		transform: scale(0.56);
 	}
   &__link {
     position: absolute;
 		right:0;
 		bottom:0;
-		width: 33%;
+		width: 50%;
 		display: block;
+		background: rgba(#fff,.9);
+		text-align: center;
+		border: 3px solid transparent;
+		border-image: url(../images/border.png) 6;
+		padding: 8px;
+		> div {
+			border: 2px solid transparent;
+			border-image: url(../images/border.png) 6;
+			padding: 8px;
+		}
+		small {
+			text-transform: uppercase;
+		}
   }
 
 }

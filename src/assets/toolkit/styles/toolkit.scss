@@ -5,7 +5,7 @@
  //@import "settings/settings.config";
  @import "node_modules/inuitcss/settings/settings.core";
 // @import "settings/settings.global";
- //@import "settings/settings.colors";
+ @import "settings/colors";
 
  // TOOLS
  @import "node_modules/inuitcss/tools/tools.font-size";
@@ -13,17 +13,20 @@
 // @import "node_modules/sass-mq/mq";
  @import "tools/object-fit";
  @import "tools/aspect-ratio";
+ @import "tools/hocus";
 
  // GENERIC
  @import "node_modules/inuitcss/generic/generic.box-sizing";
  @import "node_modules/inuitcss/generic/generic.normalize";
   @import "generic/gold-stroke";
+  @import "generic/gold-text";
  //@import "node_modules/inuitcss/generic/generic.shared";
 
  // ELEMENTS
  @import "node_modules/inuitcss/elements/elements.page";
  @import "node_modules/inuitcss/elements/elements.headings";
-
+ @import "elements/typography";
+  @import "elements/links";
 
  // OBJECTS
  @import "node_modules/inuitcss/objects/objects.layout";
@@ -34,6 +37,7 @@
  @import "node_modules/inuitcss/objects/objects.box";
  @import "node_modules/inuitcss/objects/objects.block";
  @import "node_modules/inuitcss/objects/objects.tables";
+  @import "objects/container";
 
  // COMPONENTS
 @import "components/jumbotron";
