@@ -48,7 +48,7 @@ body {
     content: '';
     position: absolute;
     display: block;
-    height: 2px;
+    height: 4px;
     width: 100px;
     bottom: -30px;
     left: 50%;
@@ -61,11 +61,24 @@ body {
 }
 
 .section__title {
-  @extend %heading--lowercase;
+  @extend %heading--uppercase;
   @include inuit-font-size(36px);
+  position: relative;
+  margin: 24px 0;
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 50px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $bg;
+  }
   &--small {
     font-family: $ff;
-    weight: 900;
+    font-weight: 900;
     @include inuit-font-size(16px);
 
   }
