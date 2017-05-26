@@ -42,7 +42,7 @@
   &__link {
     position: absolute;
 		right:20px;
-		bottom:0;
+		bottom: -70px;
 		width: 50%;
 		display: block;
 		background: rgba(#fff,.9);
@@ -50,6 +50,7 @@
 		border: 3px solid transparent;
 		border-image: url(../images/border.png) 6;
 		padding: 8px;
+		z-index: 3;
 		&--left {
 			right: auto;
 			left:20px;
