@@ -41,7 +41,7 @@
 	}
   &__link {
     position: absolute;
-		right:0;
+		right:20px;
 		bottom:0;
 		width: 50%;
 		display: block;
@@ -50,6 +50,10 @@
 		border: 3px solid transparent;
 		border-image: url(../images/border.png) 6;
 		padding: 8px;
+		&--left {
+			right: auto;
+			left:20px;
+		}
 		> div {
 			border: 2px solid transparent;
 			border-image: url(../images/border.png) 6;
