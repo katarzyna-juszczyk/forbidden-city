@@ -42,7 +42,7 @@
   &__link {
     position: absolute;
 		right:20px;
-		bottom: -70px;
+		bottom: -50px;
 		width: 50%;
 		display: block;
 		background: rgba(#fff,.9);
@@ -65,4 +65,15 @@
 		}
   }
 
+}
+
+#pattern .st1 {
+	strke-width: 3px;
+}
+#svgEmperors path {
+    transform: translateY(29px);
+}
+
+#svgForbiddencity path {
+    transform: translateY(27px);
 }

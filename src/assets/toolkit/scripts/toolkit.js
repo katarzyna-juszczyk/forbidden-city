@@ -9,6 +9,31 @@
 //   duration: 200
 //
 // }, myCallback);
+(function(){
+
+	var button = document.getElementById('cn-button'),
+    wrapper = document.getElementById('cn-wrapper');
+
+    //open and close menu when the button is clicked
+	var open = false;
+	button.addEventListener('click', handler, false);
+
+	function handler(){
+	  if(!open){
+	    this.innerHTML = "Close";
+	    $(wrapper).addClass('opened-nav');
+	  }
+	  else{
+	    this.innerHTML = "Menu";
+		$(wrapper).removeClass('opened-nav');
+	  }
+	  open = !open;
+	}
+	function closeWrapper(){
+		$(wrapper).removeClass('opened-nav');
+	}
+
+})();
 
 
 $(function(){
