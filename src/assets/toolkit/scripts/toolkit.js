@@ -82,7 +82,7 @@ $(function(){
 	function hideSVG(animation) {
 		var jumbo = $(animation.parentEl).closest('.jumbotron');
 
-		jumbo.find('.jumbotron__animation-wrapper').fadeOut(1000, "easeOutCubic", function() {
+		jumbo.find('.jumbotron__animation-wrapper').fadeOut(5000, "easeOutCubic", function() {
 			jumbo.addClass('svg--fade');
 			$('body').addClass('svg--faded');
 		});

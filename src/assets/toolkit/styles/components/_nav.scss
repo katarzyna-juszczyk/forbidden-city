@@ -17,6 +17,35 @@
   padding:0;
   border:16px solid #fff;
   box-sizing: content-box;
+  pointer-events: all;
+  outline: none;
+  transition: border-width .5s ease;
+  .svg--faded & {
+    border-width: 6px;
+  }
+  &__overlay {
+    position: fixed;
+    z-index: 200;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: rgba(#fff,.9);
+    &--closed {
+      background: transparent;
+      z-index: 0
+    }
+  }
+  &__menu, &__menu--close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 202;
+    font-weight: 900;
+    font-size: 1.5em;
+  }
+  &__menu--close { display: none;}
   svg {
     position: absolute;
     border-radius: 50%;
@@ -36,13 +65,22 @@
 .nav__wrapper {
   position: fixed;
   top: 23px;
+  bottom: 23px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 300;
+  pointer-events: none;
+  .overlay-visible & { pointer-events: all;}
 }
 
 .cn-wrapper {
 	position: absolute;
+	top: 100px;
 	left: 50%;
+  margin-left: -281px;
+  z-index: 310;
+	width: 562px;
+	height: 562px;
 	border-radius: 50%;
 	background: transparent;
 	opacity: 0;
@@ -64,11 +102,11 @@
   top:50%;
   margin-top: -3.1em;
   border-radius: 50%;
+  z-index:310;
   color: transparent;
 }
 
  .opened-nav {
-	border-radius: 50%;
 	opacity: 1;
 	transition: all .3s ease;
 	transform: scale(1);
@@ -77,18 +115,22 @@
 
  .cn-wrapper li {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 0;
+	left: 0;
 	overflow: hidden;
+	width: 290px;
+	height: 290px;
 	font-size: 1.5em;
 	transition: all .3s ease;
 	transform: rotate(76deg) skew(60deg);
 	transform-origin: 100% 100%;
 	pointer-events: none;
+
 }
 
 
  .cn-wrapper li a {
+  @extend %heading--lowercase;
 	position: absolute;
 	right: -7.25em;
 	bottom: -7.25em;
@@ -96,30 +138,37 @@
 	width: 14.5em;
 	height: 14.5em;
 	border-radius: 50%;
-	background: #429a67;
-	color: #fff;
+	background: $color-highlight;
+	background: radial-gradient(transparent 25.5%, $color-highlight 26%);
+	color: #a37748;
 	text-align: center;
 	text-decoration: none;
-	line-height: 2;
+	font-size: 1.5em;
+	line-height: 1.4;
 	transform: skew(-60deg) rotate(-75deg) scale(1);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	pointer-events: auto;
+  border: 3px solid currentColor;
+  trnsition: color .2s ease;
 }
 
+.cn-wrapper li:nth-child(even) a {
+  background: darken($color-highlight, 3);
+	background: radial-gradient(transparent 25.5%, darken($color-highlight, 3) 26%);
+}
  .cn-wrapper li a span {
 	position: relative;
-	top: 1.8em;
+  top: 12px;
 	display: block;
-	font-size: .5em;
-	font-weight: 700;
-	text-transform: uppercase;
+	font-size: .65em;
 }
 
  .cn-wrapper li a:hover,
  .cn-wrapper li a:active,
  .cn-wrapper li a:focus {
-	background: radial-gradient(transparent 35%, #449e6a 35%);
+	 color: lighten(saturate(#a37748, 20%), 10);
+
 }
  .cn-wrapper li a:focus {
     position: fixed; /* fix the displacement bug in webkit browsers when using tab key */
@@ -155,4 +204,10 @@
 
  .opened-nav li:nth-child(7) {
 	transform: rotate(172deg) skew(60deg);
+}
+
+.overlay-visible {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
 }

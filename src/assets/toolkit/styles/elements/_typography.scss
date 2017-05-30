@@ -58,6 +58,15 @@ body {
   &--small {
     @include inuit-font-size(28px, 25px);
   }
+	&--main {
+		position:absolute;
+		top: -26px;
+		right: 20px;
+		text-align: right;
+		color: #fff;
+		&:after {display: none;}
+		@include inuit-font-size(32px, 25px);
+	}
 }
 
 .section__title {
