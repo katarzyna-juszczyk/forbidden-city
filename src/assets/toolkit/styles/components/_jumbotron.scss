@@ -1,15 +1,48 @@
 
 .jumbotron {
 	position: relative;
-  @extend %golden-ratio;
+	@extend %golden-ratio;
 	&__background {
+		overflow: hidden;
 		@extend %object-fit-cover;
-    opacity:0;
 
+		&--history {
+			 width: auto;
+		}
+
+		&--emperors {
+			object-position: left -147px;
+		}
+		&--wrapper {
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top: 0;
+			overflow: hidden;
+			&:after {
+				content: '';
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    top: 0;
+		    display: block;
+		    background: rgba(0,0,0,0.2);
+				transition: opacity .4s ease;
+				opacity: 1;
+			}
+		}
+	}
+	&:hover {
+		.jumbotron__background--wrapper:after {
+			opacity: 0;
+		}
 	}
   &__animation {
     display: block;
-    @extend %object-fit-cover;
+		opacity: 1;
+
     &-wrapper {
       position: absolute;
       top: 0;
@@ -17,8 +50,13 @@
       right: 0;
       bottom: 0;
       background: $bg repeat;
+			transition: opacity .3s ease;
+			&--fade {
+				opacity: 0;
+			}
 
     }
+
   }
 
 	&__pattern {
@@ -38,6 +76,10 @@
 		mix-blend-mode: darken;
 		transform-origin: top left;
 		transform: scale(0.56);
+		.svg--fade & {
+			background: transparent;
+			mix-blend-mode: normal;
+		}
 	}
   &__link {
     position: absolute;
@@ -70,10 +112,16 @@
 #pattern .st1 {
 	strke-width: 3px;
 }
-#svgEmperors path {
-    transform: translateY(29px);
-}
 
+#imgForbiddenCity {
+		top: 0;
+    left: -134px;
+    width: 1260px;
+    height: auto;
+}
+#svgForbiddencity {
+
+}
 #svgForbiddencity path {
     transform: translateY(27px);
 }

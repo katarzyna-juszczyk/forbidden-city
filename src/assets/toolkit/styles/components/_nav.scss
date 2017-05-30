@@ -1,7 +1,7 @@
 .cn-button {
   position: relative;
   left:56px;
-	z-index: 11;
+	z-index: 201;
 	width: 106px;
 	height: 106px;
   line-height: 103px;
@@ -38,18 +38,11 @@
   top: 23px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
 }
 
 .cn-wrapper {
 	position: absolute;
-	top: 100%;
 	left: 50%;
-	z-index: 10;
-	margin-top: -13em;
-	margin-left: -13.5em;
-	width: 27em;
-	height: 27em;
 	border-radius: 50%;
 	background: transparent;
 	opacity: 0;
@@ -71,7 +64,6 @@
   top:50%;
   margin-top: -3.1em;
   border-radius: 50%;
-  z-index:10;
   color: transparent;
 }
 
@@ -88,10 +80,6 @@
 	top: 50%;
 	left: 50%;
 	overflow: hidden;
-	margin-top: -1.3em;
-	margin-left: -10em;
-	width: 10em;
-	height: 10em;
 	font-size: 1.5em;
 	transition: all .3s ease;
 	transform: rotate(76deg) skew(60deg);
@@ -109,11 +97,9 @@
 	height: 14.5em;
 	border-radius: 50%;
 	background: #429a67;
-	background: radial-gradient(transparent 35%, #429a67 35%);
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	font-size: 1.2em;
 	line-height: 2;
 	transform: skew(-60deg) rotate(-75deg) scale(1);
 	-webkit-backface-visibility: hidden;
