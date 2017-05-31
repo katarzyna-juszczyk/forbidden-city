@@ -91,6 +91,11 @@ gulp.task('scripts', function (done) {
 	});
 });
 
+gulp.task('move-scripts', function() {
+			return gulp.src(["./src/assets/toolkit/scripts/**/*"])
+					.pipe(gulp.dest(config.dest + "/assets/toolkit/scripts"));
+});
+
 
 // images
 gulp.task('images', ['favicon'], function () {
@@ -153,8 +158,8 @@ gulp.task('serve', function () {
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
-	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	gulp.task('scripts:watch', ['scripts', 'move-scripts'], reload);
+	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch', 'move-scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
@@ -169,6 +174,7 @@ gulp.task('default', ['clean'], function () {
 	var tasks = [
 		'styles',
 		'scripts',
+		'move-scripts',
 		'images',
 		'assemble'
 	];

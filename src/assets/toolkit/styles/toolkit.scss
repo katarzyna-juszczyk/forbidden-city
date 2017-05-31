@@ -18,8 +18,10 @@
  // GENERIC
  @import "node_modules/inuitcss/generic/generic.box-sizing";
  @import "node_modules/inuitcss/generic/generic.normalize";
-  @import "generic/gold-stroke";
-  @import "generic/gold-text";
+ @import "generic/reset";
+ @import "generic/gold-stroke";
+ @import "generic/gold-text";
+ @import "generic/animate";
  //@import "node_modules/inuitcss/generic/generic.shared";
 
  // ELEMENTS
@@ -40,8 +42,10 @@
   @import "objects/container";
 
  // COMPONENTS
+@import "components/animate";
 @import "components/jumbotron";
 @import "components/nav";
+@import "components/frst-timeline";
 
  // UTILITIES
  @import "node_modules/inuitcss/utilities/utilities.widths";
