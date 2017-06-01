@@ -23,6 +23,7 @@
 			bottom:0;
 			top: 0;
 			overflow: hidden;
+			opacity:0;
 			&:after {
 				content: '';
 		    position: absolute;
@@ -45,15 +46,18 @@
   &__animation {
     display: block;
 		opacity: 1;
-
+		path {
+			stroke: transparent;
+			fill: none;
+		}
     &-wrapper {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: $bg repeat;
-			transition: opacity .3s ease;
+			transition: opacity .2s linear;
+			transition-delay: .2s;
 			&--fade {
 				opacity: 0;
 			}
@@ -73,16 +77,10 @@
 		left: 0;
 		right: 0;
 		display: block;
-		background: $bg repeat;
 		overflow: hidden;
 		clip-path: polygon(100% 0, 0 100%, 0 0);
-		mix-blend-mode: darken;
 		transform-origin: top left;
 		transform: scale(0.56);
-		.svg--fade & {
-			background: transparent;
-			mix-blend-mode: normal;
-		}
 	}
   &__link {
     position: absolute;

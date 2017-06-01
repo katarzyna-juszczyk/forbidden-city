@@ -45,39 +45,33 @@ var mainNav = function() {
 
 $(function(){
   // var ilustrations = $('.jumbotron__animation');
-  // var animations = [];
+
   // ilustrations.each(function(){
   //   console.log($(this).attr('id'));
-  //   animations.push(new Vivus('', {
-  //     duration: 200
-  //   }));
   // });
   // console.log(animations);
+	var options = {
+		duration: 30,
+		onReady: function(el) {
+			$(el.parentEl.closest('.jumbotron__animation-wrapper')).addClass('gold-stroke');
+			$(el.parentEl.closest('.jumbotron')).find('.jumbotron__background--wrapper').css('opacity','1');
+		}
+	}
   var duration = 30;
   if ($('#svgEmperors').length>0) {
-    var svgEmperors = new Vivus('svgEmperors', {
-      duration: duration
-    }, hideSVG);
+    var svgEmperors = new Vivus('svgEmperors',options , hideSVG);
   }
   if ($('#svgForbiddencity').length>0) {
-    var svgForbiddencity = new Vivus('svgForbiddencity', {
-      duration: duration
-    }, hideSVG);
+    var svgForbiddencity = new Vivus('svgForbiddencity', options, hideSVG);
   }
   if ($('#svgHistory').length>0) {
-    var svgHistory = new Vivus('svgHistory', {
-      duration: duration
-    }, hideSVG);
+    var svgHistory = new Vivus('svgHistory', options, hideSVG);
   }
   if ($('#svgTraveltips').length>0) {
-    var svgTraveltips = new Vivus('svgTraveltips', {
-      duration: duration
-    }, hideSVG);
+    var svgTraveltips = new Vivus('svgTraveltips', options, hideSVG);
   }
   if ($('#svgWhattosee').length>0) {
-    var svgWhattosee = new Vivus('svgWhattosee', {
-      duration: duration
-    }, hideSVG);
+    var svgWhattosee = new Vivus('svgWhattosee', options, hideSVG);
   }
 	function hideSVG(animation) {
 		var jumbo = $(animation.parentEl).closest('.jumbotron');
@@ -85,6 +79,8 @@ $(function(){
 		jumbo.find('.jumbotron__animation-wrapper').fadeOut(500, "easeOutCubic", function() {
 			jumbo.addClass('svg--fade');
 			$('body').addClass('svg--faded');
+			jumbo.find('.jumbotron__pattern-gold').css('opacity', '0');
+			jumbo.find('.rec-white').css('opacity','1');
 		});
 
 	}
