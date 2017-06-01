@@ -113,7 +113,10 @@ gulp.task('favicon', function () {
 // assemble
 gulp.task('assemble', function (done) {
 	assemble({
-		logErrors: config.dev
+		logErrors: config.dev,
+		helpers: {
+			handlebars: require('./src/assets/fabricator/scripts/everyOther')
+		}
 	});
 	done();
 });
@@ -158,7 +161,9 @@ gulp.task('serve', function () {
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
-	gulp.task('scripts:watch', ['scripts', 'move-scripts'], reload);
+
+	gulp.task('move-scripts:watch', ['move-scripts'], reload);
+	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch', 'move-scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);

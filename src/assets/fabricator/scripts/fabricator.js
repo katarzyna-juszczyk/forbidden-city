@@ -357,7 +357,6 @@ fabricator.setInitialMenuState = function () {
 
 };
 
-
 /**
  * Initialization
  */
