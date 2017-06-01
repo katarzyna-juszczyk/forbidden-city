@@ -61,11 +61,11 @@ $(function(){
 
 
 	var options = {
-		duration: 30,
+		duration: 50,
 		onReady: function(el) {
 			$(el.parentEl.closest('.jumbotron__animation-wrapper')).addClass('gold-stroke');
 			$(el.parentEl.closest('.jumbotron')).find('.jumbotron__background--wrapper').css('opacity','1');
-			setTimeout(loaderHandler,2000);
+			setTimeout(loaderHandler,200);
 		}
 	}
 
