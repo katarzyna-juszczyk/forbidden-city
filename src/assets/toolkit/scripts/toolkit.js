@@ -50,19 +50,38 @@ $(function(){
   //   console.log($(this).attr('id'));
   // });
   // console.log(animations);
+
+	var loaderHandler = function(callback) {
+		$('.loader-wrapper').css('opacity','0')
+		setTimeout(function() { $('.loader-wrapper').remove()}, 1000);
+
+
+
+	}
+
+
 	var options = {
 		duration: 30,
 		onReady: function(el) {
 			$(el.parentEl.closest('.jumbotron__animation-wrapper')).addClass('gold-stroke');
 			$(el.parentEl.closest('.jumbotron')).find('.jumbotron__background--wrapper').css('opacity','1');
+			setTimeout(loaderHandler,2000);
 		}
 	}
-  var duration = 30;
+
   if ($('#svgEmperors').length>0) {
     var svgEmperors = new Vivus('svgEmperors',options , hideSVG);
   }
   if ($('#svgForbiddencity').length>0) {
-    var svgForbiddencity = new Vivus('svgForbiddencity', options, hideSVG);
+    var svgForbiddencity = new Vivus('svgForbiddencity', {
+				duration: 30,
+				start: 'autostart',
+				onReady: function(el) {
+					$(el.parentEl.closest('.jumbotron__animation-wrapper')).addClass('gold-stroke');
+					$(el.parentEl.closest('.jumbotron')).find('.jumbotron__background--wrapper').css('opacity','1');
+					setTimeout(loaderHandler,200);
+				}
+		}, hideSVG);
   }
   if ($('#svgHistory').length>0) {
     var svgHistory = new Vivus('svgHistory', options, hideSVG);

@@ -53,11 +53,12 @@
     &-wrapper {
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: -1px;
+      right: -1px;
       bottom: 0;
 			transition: opacity .2s linear;
 			transition-delay: .2s;
+			overflow: hidden;
 			&--fade {
 				opacity: 0;
 			}
@@ -116,19 +117,12 @@
 
 }
 
-#pattern .st1 {
-	strke-width: 3px;
-}
 
-#imgForbiddenCity {
-		top: 0;
-    left: -134px;
-    width: 1260px;
-    height: auto;
-}
-#svgForbiddencity {
 
-}
 #svgForbiddencity path {
-    transform: translateY(27px);
+    transform: translate(21px,11px);
+}
+
+#svgHistory {
+	transform: scaleX(1.1);
 }
