@@ -240,23 +240,6 @@ a {
 }
 
 
-.demo-label {
-	float: left;
-	line-height: 36px;
-	color: #535353;
-	font-weight: bold;
-}
-
-.demo-label span {
-	display: inline-block;
-	background: #054e77;
-	color: #fff;
-	text-transform: uppercase;
-	padding: 0 12px;
-	margin-right: 3px;
-	border-radius: 20px;
-}
-
 .custom-options {
 	overflow: hidden;
 	width: 60%;
@@ -272,9 +255,9 @@ a {
 
 .frst-timeline-style-4 .frst-timeline-block::before {
 	width: 3px;
-	background: #8E8F93;
+	background: $color-gray;
 	margin-left: -2px;
-	top: 36px;
+	top: 0;
 }
 
 .frst-timeline-style-4.frst-right-align .frst-timeline-block::before {
@@ -300,7 +283,7 @@ a {
 }
 
 .frst-timeline-content-inner p {
-	color: #aeafab;
+	color: $color-gray-light;
 }
 
 .frst-timeline-style-4 .frst-timeline-img span {
@@ -310,7 +293,7 @@ a {
 	padding: 6px;
 	min-width: 8px;
 	min-height: 8px;
-	background: #f13d9e;
+	background: lighten($color-gold,10);
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	vertical-align: top;
@@ -325,36 +308,41 @@ a {
 }
 
 .frst-timeline-style-4 .frst-timeline-content {
-	color: #777;
+	color: $color-gray;
 }
 
 .frst-timeline-style-4 .frst-date {
 	font-weight: 800;
 	font-size: 18px;
 	margin-bottom: 10px;
-	color: #000;
+	color: $color-gray-dark;
 	line-height: 30px;
 }
 
 .frst-timeline-style-4 h2 {
 	margin: 0 0 5px;
-	font-weight: 800;
-	color: #000;
+	font-weight: 900;
+	color: $color-gray-dark;
 	font-size: 16px;
-	color: #767772;
+	color: $color-gray;
+	width: 71%;
 }
 
 .frst-date-opposite.frst-timeline-style-4 h2 {}
 
 .frst-timeline-style-4 p {
 	margin: 0;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	 -moz-hyphens: auto;
+ hyphens: auto;
 }
 
 .frst-timeline-style-4 .frst-labels span {
 	position: relative;
 	left: -47px;
 	background: #e2e2e2;
-	color: #000;
+	color: $color-gray-dark;
 	font-weight: 800;
 	padding: 10px 20px;
 	-webkit-border-radius: 4px;
@@ -368,16 +356,16 @@ a {
 
 .content-alternate .frst-odd-item .frst-timeline-content-inner .side-border,
 .content-right-align .frst-odd-item .frst-timeline-content-inner .side-border {
-	width: 75%;
-	background: #777777;
-	position: absolute;
-	top: 34px;
-	height: 2px;
-	right: 89px;
+		background: $color-gray;
+		position: absolute;
+		top: 34px;
+		height: 2px;
+		right: 90px;
+		left: 0;
 }
 
 .frst-odd-item .frst-timeline-content-inner {
-	width: 70%;
+	width: 100%;
 	float: right;
 }
 
@@ -386,7 +374,7 @@ a {
 }
 
 .frst-even-item .frst-timeline-content-inner {
-	width: 70%;
+	width: 100%;
 	float: left;
 }
 
@@ -402,14 +390,13 @@ a {
 .content-alternate .frst-even-item .frst-timeline-content-inner h2 {
 	text-align: left;
 	position: relative;
-	left: 28%;
+	left: 25%;
 }
 
 .content-alternate .frst-even-item .frst-timeline-content-inner p {
-	position: RELATIVE;
-	right: -30px;
-	width: 80%;
-	float: right;
+	position: relative;
+	width: 71%;
+	left: 25%;
 }
 
 .content-right-align .frst-even-item .frst-timeline-content-inner h2 {
@@ -419,15 +406,16 @@ a {
 .frst-odd-item .frst-timeline-content-inner .side-border h2 {
 	position: absolute;
 	top: -30px;
-	right: 40%;
+	right: 10px;
 	font-size: 22px;
-	font-weight: 300;
-	color: #777777;
+	font-weight: 400;
+	color: $color-gray;
+	text-align: right;
 }
 
 .content-alternate .frst-even-item .frst-timeline-content-inner .side-border {
 	width: 75%;
-	background: #777777;
+	background: $color-gray;
 	position: absolute;
 	top: 34px;
 	height: 2px;
@@ -437,7 +425,7 @@ a {
 .content-left-align .frst-even-item .frst-timeline-content-inner .side-border,
 .content-left-align .frst-odd-item .frst-timeline-content-inner .side-border {
 	width: 75%;
-	background: #777777;
+	background: $color-gray;
 	position: absolute;
 	top: 34px;
 	height: 2px;
@@ -452,7 +440,7 @@ a {
 	height: 0;
 	border-top: 12px solid transparent;
 	border-bottom: 0 solid transparent;
-	border-right: 12px solid #727272;
+	border-right: 12px solid $color-gray;
 	position: absolute;
 	top: -11px;
 	right: -1px;
@@ -465,7 +453,7 @@ a {
 	height: 0;
 	border-top: 12px solid transparent;
 	border-bottom: 0 solid transparent;
-	border-right: 12px solid #727272;
+	border-right: 12px solid $color-gray;
 	position: absolute;
 	top: -11px;
 	right: -1px;
@@ -474,10 +462,10 @@ a {
 .frst-even-item .frst-timeline-content-inner .side-border h2 {
 	position: absolute;
 	top: -30px;
-	left: 40%;
+	left: 10px;
 	font-size: 22px;
-	font-weight: 300;
-	color: #777777;
+	font-weight: 400;
+	color: $color-gray;
 }
 
 .icon-section {
@@ -506,7 +494,7 @@ a {
 
 .frst-odd-item .frst-timeline-content-inner .icon-section {
 	font-size: 1.5em;
-	border: 3px solid #777777;
+	border: 3px solid $color-gray;
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
@@ -518,7 +506,7 @@ a {
 
 .frst-even-item .frst-timeline-content-inner .icon-section {
 	font-size: 1.5em;
-	border: 4px solid #777777;
+	border: 4px solid $color-gray;
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
@@ -530,7 +518,7 @@ a {
 
 .content-right-align .frst-timeline-content-inner .icon-section {
 	font-size: 1.5em;
-	border: 4px solid #777777;
+	border: 4px solid $color-gray;
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
@@ -542,7 +530,7 @@ a {
 
 .content-left-align .frst-timeline-content-inner .icon-section {
 	font-size: 1.5em;
-	border: 4px solid #777777;
+	border: 4px solid $color-gray;
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
@@ -559,7 +547,7 @@ a {
 	height: 0;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	border-left: 17px solid #727272;
+	border-left: 17px solid $color-gray;
 	position: absolute;
 	top: 24px;
 	left: -19px;
@@ -570,7 +558,7 @@ a {
 	content: "";
 	display: block;
 	height: 5px;
-	border-top: 2px solid #8E8F93;
+	border-top: 2px solid $color-gray;
 	width: 40px;
 	position: absolute;
 	top: 30px;
@@ -584,7 +572,7 @@ a {
 	height: 0;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	border-left: 17px solid #727272;
+	border-left: 17px solid $color-gray;
 	position: absolute;
 	top: 25px;
 	left: 64px;
@@ -594,7 +582,7 @@ a {
 	content: "";
 	display: block;
 	height: 5px;
-	border-top: 2px solid #8E8F93;
+	border-top: 2px solid $color-gray;
 	width: 40px;
 	position: absolute;
 	top: 31px;
@@ -608,7 +596,7 @@ a {
 	height: 0;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	border-left: 17px solid #727272;
+	border-left: 17px solid $color-gray;
 	position: absolute;
 	top: 25px;
 	left: 64px;
@@ -618,7 +606,7 @@ a {
 	content: "";
 	display: block;
 	height: 5px;
-	border-top: 2px solid #8E8F91;
+	border-top: 2px solid $color-gray;
 	width: 40px;
 	position: absolute;
 	top: 31px;
@@ -627,7 +615,7 @@ a {
 
 .content-right-align .frst-even-item .frst-timeline-content-inner .side-border {
 	width: 75%;
-	background: #777777;
+	background: $color-gray;
 	position: absolute;
 	top: 34px;
 	height: 2px;
@@ -642,7 +630,7 @@ a {
 	height: 0;
 	border-top: 12px solid transparent;
 	border-bottom: 0 solid transparent;
-	border-right: 12px solid #727272;
+	border-right: 12px solid $color-gray;
 	position: absolute;
 	top: -11px;
 	left: -1px;
@@ -653,7 +641,7 @@ a {
 	content: "";
 	display: block;
 	height: 5px;
-	border-top: 2px solid #8E8F91;
+	border-top: 2px solid $color-gray;
 	width: 40px;
 	position: absolute;
 	top: 31px;
@@ -667,7 +655,7 @@ a {
 	height: 0;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	border-left: 17px solid #727272;
+	border-left: 17px solid $color-gray;
 	position: absolute;
 	top: 24px;
 	left: -19px;
@@ -678,7 +666,7 @@ a {
 	content: "";
 	display: block;
 	height: 5px;
-	border-top: 2px solid #8E8F91;
+	border-top: 2px solid $color-gray;
 	width: 40px;
 	position: absolute;
 	top: 30px;
@@ -737,7 +725,7 @@ a {
 		height: 0;
 		border-top: 12px solid transparent;
 		border-bottom: 0 solid transparent;
-		border-right: 12px solid #727272;
+		border-right: 12px solid $color-gray;
 		position: absolute;
 		top: -11px;
 		left: -1px;
@@ -747,8 +735,7 @@ a {
 	.frst-odd-item .frst-timeline-content-inner p {
 		position: RELATIVE;
 		left: 0;
-		text-align: left;
-		width: 80%;
+		width: 71%;
 	}
 
 	.content-left-align .frst-even-item .frst-timeline-content-inner h2,
@@ -763,14 +750,14 @@ a {
 		float: right;
 		position: RELATIVE;
 		left: unset;
-		width: 80%;
+		width: 77%;
 	}
 
 	.content-right-align .frst-even-item .frst-timeline-content-inner p {
 		position: RELATIVE;
 		left: 0;
 		text-align: left;
-		width: 80%;
+		width: 71%;
 	}
 }
 @media only screen and (max-width:678px) {
@@ -789,7 +776,7 @@ a {
 
 	.content-alternate .frst-odd-item .frst-timeline-content-inner .side-border {
 		width: 75%;
-		background: #777777;
+		background: $color-gray;
 		position: absolute;
 		top: 34px;
 		height: 2px;
@@ -797,7 +784,7 @@ a {
 	}
 
 	.content-alternate .frst-odd-item .frst-timeline-content-inner {
-		width: 70%;
+		width: 100%;
 		float: left;
 	}
 
@@ -810,7 +797,7 @@ a {
 	.content-alternate .frst-odd-item .frst-timeline-content-inner p {
 		position: RELATIVE;
 		right: -30px;
-		width: 80%;
+		width: 71%;
 		float: right;
 	}
 
@@ -818,7 +805,7 @@ a {
 	.content-right-align .frst-odd-item .frst-timeline-content-inner p {
 		position: RELATIVE;
 		left: -10px;
-		width: 80%;
+		width: 71%;
 		float: left;
 		text-align: left;
 	}
@@ -842,7 +829,7 @@ a {
 		float: right;
 		position: RELATIVE;
 		left: unset;
-		width: 80%;
+		width: 71%;
 	}
 
 	.content-alternate .frst-odd-item .frst-timeline-content-inner .side-border:before {
@@ -852,7 +839,7 @@ a {
 		height: 0;
 		border-top: 12px solid transparent;
 		border-bottom: 0 solid transparent;
-		border-right: 12px solid #727272;
+		border-right: 12px solid $color-gray;
 		position: absolute;
 		top: -11px;
 		right: -1px;
@@ -863,13 +850,13 @@ a {
 		top: -30px;
 		left: 40%;
 		font-size: 22px;
-		font-weight: 300;
-		color: #777777;
+		font-weight: 400;
+		color: $color-gray;
 	}
 
 	.content-alternate .frst-odd-item .frst-timeline-content-inner .icon-section {
 		font-size: 1.5em;
-		border: 4px solid #777777;
+		border: 4px solid $color-gray;
 		border-radius: 50%;
 		width: 70px;
 		height: 70px;
@@ -886,7 +873,7 @@ a {
 		height: 0;
 		border-top: 7px solid transparent;
 		border-bottom: 7px solid transparent;
-		border-left: 17px solid #727272;
+		border-left: 17px solid $color-gray;
 		position: absolute;
 		top: 24px;
 		left: -19px;
@@ -897,7 +884,7 @@ a {
 		content: "";
 		display: block;
 		height: 5px;
-		border-top: 2px solid #8E8F93;
+		border-top: 2px solid $color-gray;
 		width: 40px;
 		position: absolute;
 		top: 30px;

@@ -170,12 +170,12 @@ events:
 
 <main class="main">
 
-	{{> nav-altered}} {{> history}}
+	{{> nav-altered}} {{> history-alt}}
 
 
 
 
-	<div class="frst-container content-alternate u-padding-bottom-large">
+	<div class="frst-container container content-alternate u-padding-bottom-large">
 		<!-- frst-left-align/frst-right-align/frst-alternate/frst-date-opposite-->
 		<div class="frst-timeline frst-timeline-style-4 frst-alternate">
 			<div class="frst-timeline-block frst-timeline-label-block"  data-animation="slideInUp">
@@ -195,7 +195,7 @@ events:
 								<div class="frst-timeline-content-inner">
 									<div class="side-border">
 										<h2>{{year}}</h2> </div>
-									<div class="icon-section"> <i class="fa fa-cloud fa-2x" aria-hidden="true"></i> </div>
+									<div class="icon-section"><div>{{> svg.symbol-svg}}</div></div>
 									<h2>{{title}}</h2>
 									<p>{{desc}}</p>
 								</div>
@@ -218,7 +218,7 @@ events:
 								<div class="frst-timeline-content-inner">
 									<div class="side-border">
 										<h2>{{year}}</h2> </div>
-									<div class="icon-section"> <i class="fa fa-star fa-2x" aria-hidden="true"></i> </div>
+									<div class="icon-section"><div>{{> svg.symbol-svg}}</div></div>
 									<h2>{{title}}</h2>
 									<p>{{desc}}</p>
 									</div>

@@ -53,7 +53,7 @@ $(function(){
   //   }));
   // });
   // console.log(animations);
-  var duration = 100;
+  var duration = 30;
   if ($('#svgEmperors').length>0) {
     var svgEmperors = new Vivus('svgEmperors', {
       duration: duration
@@ -82,7 +82,7 @@ $(function(){
 	function hideSVG(animation) {
 		var jumbo = $(animation.parentEl).closest('.jumbotron');
 
-		jumbo.find('.jumbotron__animation-wrapper').fadeOut(5000, "easeOutCubic", function() {
+		jumbo.find('.jumbotron__animation-wrapper').fadeOut(500, "easeOutCubic", function() {
 			jumbo.addClass('svg--fade');
 			$('body').addClass('svg--faded');
 		});
@@ -92,3 +92,14 @@ $(function(){
 
 
 })
+
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 630) {
+        $(".page__title.page__title--main").addClass("gold-text");
+    } else {
+        $(".page__title.page__title--main").removeClass("gold-text");
+    }
+});
