@@ -66,6 +66,8 @@ body {
 		color: #fff;
 		&:after {display: none;}
 		@include inuit-font-size(32px, 25px);
+		text-shadow: 1px 1px 1px $color-gold;
+		&.gold-text{ text-shadow: none;}
 	}
 }
 
