@@ -1,24 +1,138 @@
-
+---
+people:
+- title: Chengzu of the Ming
+  name: Emperor Yongle
+  date: r. 1402-1424
+  datadate: 01/01/2001
+  quote: I ordered The Forbidden City to be built.
+- title: Renzong of the Ming
+  name: Emperor Hongxi
+  date: r. 1424-1425
+  datadate: 01/01/2002
+  quote: I was on the throne for eight months
+- title: Xuangzong of the Ming
+  name: Emperor Xuande
+  date: r. 1425-1435
+  datadate: 01/01/2003
+  quote: Crickets were my hobby
+- title: Yingzong of the Ming
+  name: Emperor Zhengtong
+  date: r. 1433-1449
+  datadate: 01/01/2004
+  quote: I was captured during a battle and after seven years I was restored back
+    to the throne and given a name of Yingzong of the Ming.
+- title: Dalzong of the Ming
+  name: Emperor Jingtai
+  date: r. 1449-1464
+  datadate: 01/01/2005
+  quote: I substituted for Yinzong for seven years.
+- title: Xianzong of the Ming
+  name: Emperor Chenghua
+  date: r. 1464-1487
+  datadate: 01/01/2006
+  quote: I was a weakling whose hands were tied.
+- title: Xiaozong of the Ming
+  name: Emperor Hongzhi
+  date: r. 1487-1505
+  datadate: 01/01/2007
+  quote: I was a wise ruler who restored glory to the ming empire.
+- title: Wuzong of the Ming
+  name: Emperor Zhengde
+  date: r. 1505-1521
+  datadate: 01/01/2008
+  quote: I was a fiasco!
+- title: Shizong of the Ming
+  name: Emperor Jiajing
+  date: r. 1521-1567
+  datadate: 01/01/2009
+  quote: I was crazy about construction projects.
+- title: Muzong of the Ming
+  name: Emperor Longqing
+  date: r. 1567-1572
+  datadate: 01/01/2010
+  quote: I was entirely unaccomplished.
+- title: Shenzong of the MingTaichang
+  date: r. 1620
+  datadate: 01/01/2011
+  quote: I was on the throne for one month
+- title: Xizong of the Ming
+  name: Emperor Tianqi
+  date: r. 1620-1627
+  datadate: 01/01/2012
+  quote: Carpentry was my only interest.
+- title: Sizong of the Ming
+  name: Emperor Chonzgzhen
+  date: r. 1627-1644
+  datadate: 01/01/2013
+  quote: I lost the throne and hanged myself
+- title: Shizu of the Qing
+  name: Emperor Shunzhi
+  date: r. 1643-1661
+  datadate: 01/01/2014
+  quote: After the Manchus coenquered China in 1644, we established Qing dynasty.
+    All of the Qing emperors lived in The Forbidden City.
+- title: Shengzu of the Quing
+  name: Emperor Kangxi
+  date: r. 1662-1722
+  datadate: 01/01/2015
+  quote: The Golden Age of the Qing Dynasty started during my reign.
+- title: Shizong of the Qing
+  name: Emperor Yongzheng
+  date: r. 1722-1735
+  datadate: 01/01/2016
+  quote: I ruled with diligence and hard work.
+- title: Gaozong od the Qing
+  name: Emperor Qianlong
+  date: r. 1736-1796
+  datadate: 01/01/2017
+  quote: During my reign the Qing dynasty reached its pinnacle.
+- title: Renzong of the Qing
+  name: Emperor Jianqing
+  date: r. 1796-1820
+  datadate: 01/01/2018
+  quote: My reign was the beginning of the decline.
+- title: Xuanzong of the Qing
+  name: Emperor Daoguang
+  date: r. 1820-1850
+  datadate: 01/01/2019
+  quote: I was a frugal and common ruler.
+- title: Wenzong of the Qing
+  name: Emperor Xianfeng
+  date: r. 1850-1861
+  datadate: 01/01/2020
+  quote: The Taiping Rebelion erupted during my reign
+- title: Muzong of the Qing
+  name: Emperor Tongzhi
+  date: r. 1861-1875
+  datadate: 01/01/2021
+  quote: I was a puppet of the Empress Dowagers.
+- title: Denzong of the Qing
+  name: Emperor Guangxu
+  date: r. 1875-1908
+  datadate: 01/01/2022
+  quote: My desire for reform waws never realized.
+- title: Puyi of the Qing
+  name: Emperor Xuantong
+  date: r. 1908-1911
+  datadate: 01/01/2023
+  quote: I was the last of the Qing dynasty.
+---
 <main class="main">
 
 	{{> nav-altered}} {{> emperors-alt}}
 
 
 
-  <div id="frst-carousel" class="frst-container frst-carousel" style="max-width:100%">
+  <div id="frst-carousel" class="frst-container container frst-carousel" style="max-width:100%">
          <div class="frst-timeline-style-17">
  	<div class="timeline">
  		<div class="events-wrapper">
  			<div class="events">
- 				<ol>
- 					<li><a href="#0" data-date="01/01/2003" class="selected">2003</a></li>
- 					<li><a href="#0" data-date="01/01/2004">2004</a></li>
- 					<li><a href="#0" data-date="01/01/2006">2006</a></li>
- 					<li><a href="#0" data-date="01/01/2010">2010</a></li>
- 					<li><a href="#0" data-date="01/01/2012">2012</a></li>
- 					<li><a href="#0" data-date="01/01/2013">2013</a></li>
- 					<li><a href="#0" data-date="01/01/2015">2015</a></li>
- 					<li><a href="#0" data-date="01/01/2016">2016</a></li>
+ 				<ol class="o-list-bare">
+          {{#each people}}
+            {{#unless @index}}<li><a href="#0" data-date="{{datadate}}" class="selected">{{date}}</a></li>{{/unless}}
+            {{#if @index}}<li><a href="#0" data-date="{{datadate}}">{{date}}</a></li>{{/if}}
+          {{/each}}
  				</ol>
 
  				<span class="filling-line" aria-hidden="true"></span>
@@ -32,79 +146,31 @@
  	</div> <!-- .timeline -->
 
  	<div class="events-content">
- 		<ol>
-             <li class="selected" data-date="01/01/2003">
- 				<h2>Linkedin</h2>
- 				<em>2003</em>
- 				<p>
- 					Linkedin begins.
-
- 				</p>
- 			</li>
- 			<li data-date="01/01/2004">
-                <h2>Foundation of Facebook</h2>
- 				<em>2004</em>
- 				<p>
- 					The Facebook website was launched on February ,2004
- 				</p>
-                 <div class="media-section"><img src="images/facebook-foundation.jpg" /></div>
-
- 			</li>
-
- 			<li data-date="01/01/2006">
- 				<h2>Twitter</h2>
- 				<em>2006</em>
- 				<p>
- 					Twitter was created in March 2006.
- 				</p>
- 			</li>
-
- 			<li data-date="01/01/2010">
- 				<h2>Instagram</h2>
- 				<em>2010</em>
- 				<p>
- 					Instagram is launched in October 2010 as a free mobile app exclusively for the IOS operating system.
- 				</p>
-                 <div class="media-section"> <iframe width="560" height="315" src="https://www.youtube.com/embed/oG8P5MZ9_cI" frameborder="0" allowfullscreen></iframe></div>
-
- 			</li>
-
- 			<li data-date="01/01/2012">
- 				<h2>Facebook Began selling stock</h2>
- 				<em>2012</em>
- 				<p>
-                 Facebook began selling stock to the public and trading on the NASDAQ on MAY 18,2012.
- 				</p>
- 			</li>
-
- 			<li data-date="01/01/2013">
- 				<h2>Twitter music for the Iphone</h2>
- 				<em>2013</em>
- 				<p>
- 				Twitter launched a music app called Twitter Music for the Iphone.
- 				</p>
- 			</li>
-
-
- 			<li data-date="01/01/2015">
- 				<h2>Youtube Kids</h2>
- 				<em>2015</em>
- 				<p>
- 					In February 2015, Youtube released a secondary mobile app known as Youtube Kids.
-
- 				</p>
-                 <div class="media-section"><img src="images/youtube-kids.png" /></div>
- 			</li>
-
- 			<li data-date="01/01/2016">
- 				<h2>Skype free video group calling</h2>
- 				<em>2016</em>
- 				<p>
- 					In January 2016, Skype announced it would roll out free group video calling to users on mobile devices, including iOS and Android. In February 2016, Microsoft announced that it had started to introduce group calling on smartphones and tablets in North America and Western Europe.
- 				</p>
- 			</li>
-
-
+ 		<ol class="o-list-bare">
+      {{#each people}}
+        {{#unless @index}}
+          <li data-date="{{datadate}}" class="selected">
+              <article class="emperor">
+                <small>{{title}}</h3>
+              <h2>{{name}}</h2>
+              <blockquote>
+                {{quote}}
+              </blockquote>
+            </article>
+          </li>
+        {{/unless}}
+        {{#if @index}}
+          <li data-date="{{datadate}}">
+              <article class="emperor">
+                <small>{{title}}</h3>
+              <h2>{{name}}</h2>
+              <blockquote>
+                {{quote}}
+              </blockquote>
+            </article>
+          </li>
+        {{/if}}
+      {{/each}}
  		</ol>
  	</div> <!-- .events-content -->
  </div>
