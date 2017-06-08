@@ -1,0 +1,78 @@
+.place {
+  &__name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right:0;
+      color: #fff;
+      text-shadow: 1px 1px 1px $color-gold;
+      z-index: 2;
+  		&:after {display: none;}
+  }
+  &__image {
+    height: 0;
+    padding-bottom: 100%;
+    box-sizing: content-box;
+    background-size:cover;
+    background-position: center center;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      display: block;
+      background: rgba(0,0,0,0.2);
+      transition: opacity .4s ease;
+      opacity: 1;
+      z-index: 1;
+    }
+
+  }
+  &:hover {
+     .place__image:after {opacity: 0;}
+  }
+
+
+  &__description {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    span {
+      @extend %heading--uppercase;
+      @extend .gold-text;
+      font-size: 8rem;
+      line-height: 115px;
+      letter-spacing: 1px;
+      color: $color-text;
+      text-align: center;
+      letter-spacing: 3px;
+      position: relative;
+      top: 12px;
+      float: left;
+      margin-right: 14px;
+      width: 140px;
+      height: 140px;
+      padding: 8px;
+      border: 3px solid transparent;
+      border-image: url(../images/border.png) 6;
+      box-shadow: $box-shadow;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+
+        border: 2px solid transparent;
+        border-image: url(../images/border.png) 6;
+      }
+    }
+
+  }
+}
