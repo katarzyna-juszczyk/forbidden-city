@@ -282,10 +282,6 @@ a {
 	font-size: 24px;
 }
 
-.frst-timeline-content-inner p {
-	color: $color-gray-light;
-}
-
 .frst-timeline-style-4 .frst-timeline-img span {
 	box-shadow: 0 0 0 3px #fff;
 	display: inline-block;
@@ -320,12 +316,12 @@ a {
 }
 
 .frst-timeline-style-4 h2 {
-	margin: 0 0 5px;
+	margin: 0;
 	font-weight: 900;
 	color: $color-gray-dark;
 	font-size: 16px;
-	color: $color-gray;
 	width: 71%;
+	margin-bottom: 1em;
 }
 
 .frst-date-opposite.frst-timeline-style-4 h2 {}
