@@ -95,6 +95,7 @@
 		border-image: url(../images/border.png) 6;
 		padding: 8px;
 		z-index: 3;
+		box-shadow: $box-shadow;
 		&--left {
 			right: auto;
 			left:20px;

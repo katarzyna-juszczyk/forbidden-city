@@ -111,31 +111,34 @@ Main Components
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);
-  height: 34px;
-  width: 34px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
-  border: 2px solid $color-gray;
-  color: $color-gray;
-  /* replace text with an icon */
-  overflow: hidden;
-  color: transparent;
-  text-indent: 100%;
-  white-space: nowrap;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  background: #fff;
+  text-align: center;
+  &:hover .svg-wrapper{
+    opacity: .7;
+  }
+  .svg-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    transition: opacity 0.3s;
+    &, svg {
+
+      height: 65px;
+      width: auto;
+    }
+  }
 }
-.frst-timeline-navigation a:hover {
-       border: 2px solid $color-gold;
-    color: $color-gold;
-}
+
+
 .frst-timeline-navigation a.prev{
     left:0;
 }
 
-.frst-timeline-navigation a:hover:before {
-      color: $color-gold;
-}
 
 
 .frst-timeline-navigation a.next {
@@ -143,15 +146,11 @@ Main Components
 }
 
 
-.no-touch .frst-timeline-navigation a:hover {
-     border-color: $color-gold;
-}
 .frst-timeline-navigation a.inactive {
   cursor: not-allowed;
+  .svg-wrapper {opacity: .2;}
 }
-.frst-timeline-navigation a.inactive::after {
-  background-position: 0 -16px;
-}
+
 .no-touch .frst-timeline-navigation a.inactive:hover {
   border-color: $color-gray;
 }
@@ -196,19 +195,30 @@ Main Components
   margin: 0 auto;
 }
 
+.emperor__image {
+  max-width: none;
+}
 
+.emperor__bq {
+  position: relative;
+  margin: 0;
+  p {
+    position: relative;
+  z-index: 2;}
+}
 
+.emperor__border {
+  position: absolute;
+  top:0;
+  bottom:0;
+  width: 25%;
+  z-index: 1;
+}
 
 @media only screen and (min-width: 768px) {
   .frst-timeline-style-17 .events-content h2 {
     font-size: 2.6rem;
     color: $color-gold;
-  }
-  .frst-timeline-style-17 .events-content em {
-    font-size: 2rem;
-  }
-  .frst-timeline-style-17 .events-content p {
-    font-size: 1.8rem;
   }
 }
 
