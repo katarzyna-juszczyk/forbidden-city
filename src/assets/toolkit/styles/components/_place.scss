@@ -1,4 +1,17 @@
 .place {
+ &:nth-child(even) {
+   direction: rtl;
+   .place__pattern {
+     transform: scale(.6, .6);
+     transform-origin: top left;
+   }
+ }
+ &:nth-child(odd) {
+   .place__pattern {
+     transform: scale(-.6, .6) translateX(-170px);
+     transform-origin: top;
+   }
+ }
   &__name {
       position: absolute;
       bottom: 0;
@@ -7,6 +20,7 @@
       color: #fff;
       text-shadow: 1px 1px 1px $color-gold;
       z-index: 2;
+      direction: ltr;
   		&:after {display: none;}
   }
   &__image {
@@ -42,6 +56,7 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    direction: ltr;
     span {
       @extend %heading--uppercase;
       @extend .gold-text;
@@ -55,6 +70,7 @@
       top: 12px;
       float: left;
       margin-right: 14px;
+      margin-left: -14px;
       width: 140px;
       height: 140px;
       padding: 8px;
@@ -75,4 +91,23 @@
     }
 
   }
+
+  // &__pattern {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  &__pattern {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    display: block;
+    overflow: hidden;
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    transform-origin: top left;
+    transform: scale(0.56);
+    z-index: 3
+  }
+
 }
