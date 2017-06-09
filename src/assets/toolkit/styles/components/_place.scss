@@ -57,6 +57,7 @@
     -ms-hyphens: auto;
     hyphens: auto;
     direction: ltr;
+    @include inuit-font-size(12px, 1.57);
     span {
       @extend %heading--uppercase;
       @extend .gold-text;

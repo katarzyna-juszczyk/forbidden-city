@@ -1,5 +1,90 @@
+---
+tipsobject:
+- desc: "Go in the morning. The Forbidden City limits ticket sales to 80,000 per day.
+    That may sound like a lot, but it is not unusual during holidays and special exhibitions
+    for tickets to sell out by early afternoon. For example, on a relatively busy
+    Tuesday (today), the Forbidden City had already sold 44,000 tickets before 10.30am."
+- desc: "Skip Mao. 90 percent of visitors approach the Forbidden City from the south,
+    entering via Tiananmen. But getting to that point usually requires passing through
+    long lines and official security checks. You can avoid these by instead approaching
+    from the east or west rather than walking in under the big picture of Mao. I prefer
+    going through Zhongshan Park along the western edge of the Forbidden City. From
+    the Tiananmen West subway stop, travel north along Nanchang Jie 400 meters to
+    the gate of Zhongshan Park. Pay the small (RMB 2-3) entrance fee, walk along the
+    moat to the park’s eastern entrance and this will take you directly to the ticketing
+    plaza in front of the Forbidden City’s main entrance. You will still have to wait
+    in line for museum security before going inside, but anytime in Beijing you can
+    skip a line, you save a lot of time."
+- desc: "Bring your passport with you. Leave your lighter at home. New policies enacted
+    in 2015 require a form of national identification for each ticket purchased. If
+    you forget your passport you can try something else (I had a client get in with
+    their Colorado driving license) but that doesn’t always work. The security checkers
+    are also on the look out for lighters. Having failed to convince people that it''s
+    probably a bad idea to smoke inside a 600-year-old palace made of wood, the staff
+    have taken the next logical step: confiscating all lighters at the front door."
+- desc: "Take water. Drinks inside are massively expensive. A small bottle of water
+    in the first courtyard is about 7rmb (as opposed to the usual 2rmb), rising to
+    15rmb further inside. A not-very-good coffee or milkshake is nearer 35rmb. There
+    used to be a Starbucks inside the Forbidden City, but it was closed by public
+    demand."
+- desc: "Dress comfortably – there’s not that much shade (and what there is tends to
+    be full of school groups) so dress cool and take sunscreen or a parasol. Sensible
+    shoes are also worthwhile as you may be walking for 3-4 hours, and be prepared
+    to marvel at the number of people wandering the cobbled courtyards in 4-inch heels."
+- desc: "You should be an experienced shopper to know what something is worth in a Chinese
+    market.  Generally the shopkeeper will start at 10X what you should counteroffer.  You
+    could ask strangers what they would typically pay for it. Taxi prices are set
+    by meter.  Food merchants naturally will jack up the price for foreign-looking
+    people, so be sure to bargain.  Bargaining is an art in China.  If you do not
+    care for it, have someone else buy things for you."
+- desc: "Like anywhere, some tourist attractions are overrated.  Avoid visiting mid-morning
+    and mid-afternoon when group bus tours unload hundreds, if not thousands, of tourists
+    to overrun a previously enjoyable attraction."
+- desc: "Chinese people are delighted if you make any attempt to speak Mandarin, even
+    if it’s only a couple of words.  The best way to introduce yourself is with a
+    warm, broad smile.  Even when you might be upset or frustrated, smile. It works."
+- desc: "Traveling in China on its holidays can be a nightmare.  Plan your trip carefully
+    so you know what to expect on the Chinese Official Holidays.  China-briefing.com
+    is a good source, so search for the current year.  While the holidays may be the
+    same from year to year, even tied to fixed dates, the entire holiday period will
+    shift.  New schedules are posted in December, just a week or so before the year
+    begins."
+- desc: "Anyone who approaches you trying to practice English should be greeted with
+    a smile and skepticism.  Most Chinese are shy and will not speak to you unless
+    you speak first.  Those who overtly approach you and make the first move are likely
+    to be selling something or worse.  Many tourists reports scams in Shanghai, so
+    be friendly but careful. Never ever follow a stranger anywhere.  Period."
+- desc: "Chinese restaurants with lots of foreigners are almost always unauthentic,
+    as well as overpriced.  Usually frequented by group tours, these places change
+    recipes to conform to what they think are western tastes.  Many middle-class,
+    white linen restaurants, hosting families around big round tables, have English
+    menus with sometimes humorous translations.  The more crowded with families it
+    is, the better value and food it has.  The menu's color pictures will help also.  If
+    they just showmyou an English menu, ask to see both.  They might be pricing the
+    food twice to five-times higher for tourists."
+- desc: "Luxury goods are expensive in China, thanks to a luxury tax.  Go to Hong Kong
+    to make a killing on name-brand bargains.  In China you can find some good buys
+    in silk, pearls, jade and handicrafts, but you must study a bit to make sure you
+    are getting the real thing.  Bone porcelain can be a good buy too, but it must
+    be carefully packed for your air travel."
+---
 <main class="main">
-
 	{{> nav-altered}} {{> tips-alt}}
 
+ <div class="container">
+	 <ol class="tips u-margin-top-huge u-padding-left-none o-list-bare">
+	{{#each tipsobject}}
+
+		<li class="tip u-padding-top-large u-padding-bottom-large o-layout o-layout--center">
+			<div class="tip__content o-layout__item u-2/3">
+				<p class=" u-margin-none">
+					{{desc}}
+				</p>
+			</div>
+			{{> svg.divider-svg }}
+		</li>
+
+	{{/each}}
+	</ol>
+ </div>
 </main>
