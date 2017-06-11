@@ -42,3 +42,22 @@
   }
 
 }
+
+
+.map__wrapper {
+  position: relative;
+}
+
+.map {
+  display: block;
+}
+
+.pointer__wrapper {
+  position: absolute;
+      top: 227px;
+      left: 490px;
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      overflow: hidden;
+}

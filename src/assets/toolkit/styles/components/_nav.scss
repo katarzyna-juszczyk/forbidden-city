@@ -20,6 +20,12 @@
   pointer-events: all;
   outline: none;
   transition: border-width .5s ease;
+  @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  left: 24px;
+  top: -13px;
+}
   .svg--faded & {
     border-width: 6px;
   }
@@ -30,7 +36,7 @@
     left:0;
     right:0;
     bottom:0;
-    background: rgba(#fff,.9);
+    background: rgba(#000,.3);
     &--closed {
       background: transparent;
       z-index: 0

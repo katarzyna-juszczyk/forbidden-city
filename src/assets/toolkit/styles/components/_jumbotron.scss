@@ -96,6 +96,9 @@
 		padding: 8px;
 		z-index: 3;
 		box-shadow: $box-shadow;
+		&--wide {
+			width: 66%;
+		}
 		&--left {
 			right: auto;
 			left:20px;
