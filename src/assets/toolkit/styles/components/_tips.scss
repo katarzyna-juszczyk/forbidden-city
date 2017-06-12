@@ -5,7 +5,9 @@
 
     counter-increment: tip;
 
-
+  &:last-child {
+    padding-bottom: 0 !important;
+  }
   div {
     text-align: justify;
     -webkit-hyphens: auto;
@@ -47,4 +49,4 @@
   }
 }
 
-.divider {opacity: .4;}
+.divider {opacity: .7;}

@@ -44,6 +44,11 @@ body {
   letter-spacing: 3px;
   position: relative;
   margin: 24px 0 48px;
+	@media only screen
+	and (min-device-width : 768px)
+	and (max-device-width : 1024px) {
+		  @include inuit-font-size(56px,48px);
+	}
   &:after {
     content: '';
     position: absolute;
@@ -121,6 +126,9 @@ body {
   }
 }
 
+.more .section__intro--small {
+	@include inuit-font-size(12px, 1.57);
+}
 
 .article {
 	img {
@@ -132,4 +140,7 @@ body {
     color: #4a4746;
     font-size: 16px;
 	}
+}
+.more .jumbotron__link  {
+	background: #fff;
 }

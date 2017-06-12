@@ -15,8 +15,9 @@
 
 </head>
 <body>
-
+{{#unless fabricator}}
 	{{> svg.loader-svg}}
+	{{/unless}}
 	{{#if fabricator}}
 		{{> f-icons}}
 		{{> f-menu}}
@@ -27,7 +28,12 @@
 
 	{% body %}
 
+	{{#unless fabricator}}
 
+		<div style="align-center">
+
+		</div>
+	{{/unless}}
 	{{#if fabricator}}
 		</div>
 
