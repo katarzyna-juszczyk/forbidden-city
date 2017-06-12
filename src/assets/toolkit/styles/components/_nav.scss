@@ -39,7 +39,8 @@ and (max-device-width : 1024px) {
     background: rgba(#000,.3);
     &--closed {
       background: transparent;
-      z-index: 0
+      z-index: -1;
+      pointer-events: none;
     }
   }
   &__menu, &__menu--close {

@@ -1,4 +1,5 @@
 .place {
+  overflow: hidden;
  &:nth-child(even) {
    direction: rtl;
    .place__pattern {
@@ -61,20 +62,21 @@
     span {
       @extend %heading--uppercase;
       @extend .gold-text;
-      font-size: 8rem;
-      line-height: 115px;
-      letter-spacing: 1px;
-      color: $color-text;
-      text-align: center;
-      letter-spacing: 3px;
-      position: relative;
-      top: 12px;
-      float: left;
-      margin-right: 14px;
-      margin-left: -14px;
-      width: 140px;
-      height: 140px;
-      padding: 8px;
+      font-size: 6rem;
+line-height: 94px;
+letter-spacing: 1px;
+color: #4a4746;
+text-align: center;
+letter-spacing: 3px;
+position: relative;
+top: 2px;
+float: left;
+margin-right: 12px;
+margin-left: -12px;
+width: 112px;
+height: 112px;
+padding: 8px;
+text-indent: 3px;
       border: 3px solid transparent;
       border-image: url(../images/border.png) 6;
       box-shadow: $box-shadow;

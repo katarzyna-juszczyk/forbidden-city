@@ -43,6 +43,17 @@
 
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.icon-camera {
+  width: 1.3125em;
+}
 
 .map__wrapper {
   position: relative;

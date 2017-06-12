@@ -144,3 +144,15 @@ body {
 .more .jumbotron__link  {
 	background: #fff;
 }
+
+.icon-camera {
+	height: 33px;
+	width: 50px;
+	position: relative;
+	bottom: -8px;
+	path {stroke-width: 1;}
+}
+
+.link {
+    span {text-decoration: underline;}
+}

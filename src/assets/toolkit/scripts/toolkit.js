@@ -16,7 +16,9 @@ var mainNav = function() {
 
     //open and close menu when the button is clicked
 	var open = false;
-	button.addEventListener('click', handler, false);
+	if (button) {
+		button.addEventListener('click', handler, false);
+	}
 	$('body').append('<div class="cn-button__overlay cn-button__overlay--closed"/>');
 	function handler(){
 	  if(!open){
@@ -54,12 +56,33 @@ $(function(){
 	var loaderHandler = function(callback) {
 		$('.loader-wrapper').css('opacity','0')
 		setTimeout(function() { $('.loader-wrapper').remove()}, 1000);
-
-
-
 	}
 
 
+ if ($('#gallery').length) {
+	 loaderHandler();
+
+		$("body").vegas({
+			preload: true,
+			transitionDuration: 2000,
+	 		delay: 10000,
+	    slides: [
+			        { src: "../assets/toolkit/images/gallery/slide1.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide2.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide3.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide4.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide5.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide6.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide7.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide8.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide9.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide10.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide11.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide12.jpg" },
+							{ src: "../assets/toolkit/images/gallery/slide13.jpg" }
+			    ]
+			});
+ }
 	var options = {
 		duration: 50,
 		onReady: function(el) {
@@ -107,12 +130,17 @@ $(function(){
 
 
 })
-
+var scroll = $(window).scrollTop();
+if (scroll >= $('.jumbotron__background--wrapper').height()) {
+		$(".page__title.page__title--main").addClass("gold-text");
+} else {
+		$(".page__title.page__title--main").removeClass("gold-text");
+}
 
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 630) {
+    if (scroll >= $('.jumbotron__background--wrapper').height()) {
         $(".page__title.page__title--main").addClass("gold-text");
     } else {
         $(".page__title.page__title--main").removeClass("gold-text");
