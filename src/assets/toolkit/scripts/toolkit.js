@@ -1,20 +1,8 @@
-/**
- * Toolkit JavaScript
- */
-
-'use strict';
-
-//
-// new Vivus('my-svg', {
-//   duration: 200
-//
-// }, myCallback);
 (function(){
 var mainNav = function() {
 	var button = document.getElementById('cn-button'),
     wrapper = document.getElementById('cn-wrapper');
 
-    //open and close menu when the button is clicked
 	var open = false;
 	if (button) {
 		button.addEventListener('click', handler, false);
@@ -46,12 +34,6 @@ var mainNav = function() {
 
 
 $(function(){
-  // var ilustrations = $('.jumbotron__animation');
-
-  // ilustrations.each(function(){
-  //   console.log($(this).attr('id'));
-  // });
-  // console.log(animations);
   window.scrollTo(0,0);
 	var loaderHandler = function(callback) {
 		$('.loader-wrapper').css('opacity','0')
@@ -92,9 +74,19 @@ $(function(){
 			setTimeout(loaderHandler,200);
 		}
 	}
+	var hideSVG = function(animation) {
+		var jumbo = $(animation.parentEl).closest('.jumbotron');
 
+		jumbo.find('.jumbotron__animation-wrapper').fadeOut(500, "easeOutCubic", function() {
+			jumbo.addClass('svg--fade');
+			$('body').addClass('svg--faded');
+			jumbo.find('.jumbotron__pattern-gold').css('opacity', '0');
+			jumbo.find('.rec-white').css('opacity','1');
+		});
+
+	}
   if ($('#svgEmperors').length>0) {
-    var svgEmperors = new Vivus('svgEmperors',options , hideSVG);
+    var svgEmperors = new Vivus('svgEmperors',options, hideSVG);
   }
   if ($('#svgForbiddencity').length>0) {
     var svgForbiddencity = new Vivus('svgForbiddencity', {
@@ -116,17 +108,7 @@ $(function(){
   if ($('#svgWhattosee').length>0) {
     var svgWhattosee = new Vivus('svgWhattosee', options, hideSVG);
   }
-	function hideSVG(animation) {
-		var jumbo = $(animation.parentEl).closest('.jumbotron');
 
-		jumbo.find('.jumbotron__animation-wrapper').fadeOut(500, "easeOutCubic", function() {
-			jumbo.addClass('svg--fade');
-			$('body').addClass('svg--faded');
-			jumbo.find('.jumbotron__pattern-gold').css('opacity', '0');
-			jumbo.find('.rec-white').css('opacity','1');
-		});
-
-	}
 
 
 
