@@ -22,7 +22,7 @@
 .vegas-timer {
     top: auto;
     bottom: 0;
-    height: 2px;
+    height: 5px;
 }
 
 .vegas-timer-progress {
@@ -47,7 +47,7 @@
     will-change: transform, opacity;
 }
 
-body .vegas-container {
+  .vegas-container {
     overflow: hidden !important;
     position: relative;
 }
@@ -59,23 +59,23 @@ body .vegas-container {
     height: auto;
 }
 
-body.vegas-container {
+ .vegas-container {
     overflow: auto;
     position: static;
     z-index: -2;
 }
 
-body.vegas-container > .vegas-timer,
-body.vegas-container > .vegas-overlay,
-body.vegas-container > .vegas-slide {
+ .vegas-container > .vegas-timer,
+ .vegas-container > .vegas-overlay,
+ .vegas-container > .vegas-slide {
     position: fixed;
     z-index: -1;
 }
 
 /* Target Safari IOS7+ in order to add 76px */
 _::full-page-media, _:future,
-:root body.vegas-container > .vegas-slide,
-:root body.vegas-container > .vegas-overlay {
+:root  .vegas-container > .vegas-slide,
+:root  .vegas-container > .vegas-overlay {
     bottom: -76px;
 }
 
@@ -625,5 +625,15 @@ _::full-page-media, _:future,
     100% {
         -webkit-transform: scale(1) translate(0, 0);
                 transform: scale(1) translate(0, 0);
+    }
+}
+
+
+
+.gallery-pattern .rec-white{
+    width: 100% !important;
+    transform: translateY(-51px);
+    @media screen and (max-width: 1024px) {
+      transform: translateY(-174px);
     }
 }

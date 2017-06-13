@@ -63,7 +63,7 @@ $(function(){
 	 loaderHandler();
 
 	 $('body').addClass('svg--faded');
-		$("body").vegas({
+		$("#gallery").vegas({
 			preload: true,
 			transitionDuration: 2000,
 	 		delay: 10000,
