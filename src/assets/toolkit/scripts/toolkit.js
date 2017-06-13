@@ -52,7 +52,7 @@ $(function(){
   //   console.log($(this).attr('id'));
   // });
   // console.log(animations);
-
+  window.scrollTo(0,0);
 	var loaderHandler = function(callback) {
 		$('.loader-wrapper').css('opacity','0')
 		setTimeout(function() { $('.loader-wrapper').remove()}, 1000);
@@ -62,6 +62,7 @@ $(function(){
  if ($('#gallery').length) {
 	 loaderHandler();
 
+	 $('body').addClass('svg--faded');
 		$("body").vegas({
 			preload: true,
 			transitionDuration: 2000,

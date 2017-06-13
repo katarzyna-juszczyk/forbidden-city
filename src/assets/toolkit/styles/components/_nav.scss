@@ -39,7 +39,7 @@ and (max-device-width : 1024px) {
     background: rgba(#000,.3);
     &--closed {
       background: transparent;
-      z-index: -1;
+      z-index: 0;
       pointer-events: none;
     }
   }
@@ -217,4 +217,10 @@ and (max-device-width : 1024px) {
   position: fixed;
   height: 100%;
   overflow: hidden;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
 }
+
+body {background:#fff;}
